@@ -1,0 +1,181 @@
+/* 
+
+.enrolled-courses-container {
+  flex: 1;
+  padding: 40px;
+}
+
+.enrolled-courses-container h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-item {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.course-item:hover {
+  transform: translateY(-5px);
+}
+
+.course-item h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.course-item p {
+  color: #666;
+  margin-bottom: 0;
+} */
+
+/* frontend/src/styles/EnrolledCourses.css */
+
+.enrolled-courses-container {
+    padding: 20px;
+    background-color: var(--background-color);
+    min-height: calc(100vh - 60px); /* Adjust based on header height */
+}
+
+.enrolled-courses-container h2 {
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.enrollment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 15px;
+}
+
+.enrollment-item {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.enrollment-item:hover {
+    transform: translateY(-5px);
+}
+
+.course-info h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.course-info p {
+    color: var(--secondary-text-color);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.course-info .status-enrolled,
+.course-info .status-in-progress {
+    color: var(--info-color); /* Example: blue/green */
+    font-weight: bold;
+}
+
+.course-info .status-completed {
+    color: var(--success-color); /* Example: green */
+    font-weight: bold;
+}
+
+.course-info .status-dropped {
+    color: var(--error-color); /* Example: red */
+    font-weight: bold;
+}
+
+.progress-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-section label {
+    font-weight: bold;
+    color: var(--primary-text-color);
+    margin-right: 5px;
+}
+
+.progress-input {
+    width: 80px; /* Adjust width as needed */
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--input-bg);
+    color: var(--input-text-color);
+}
+
+.progress-section span {
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
+.progress-section button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    flex-shrink: 0; /* Prevent buttons from shrinking too much */
+}
+
+.progress-section button:first-of-type { /* Update Progress button */
+    background-color: var(--accent-color); /* Example: orange */
+    color: white;
+}
+
+.progress-section button:first-of-type:hover:not(:disabled) {
+    background-color: var(--accent-hover-color);
+}
+
+.complete-button {
+    background-color: var(--success-color); /* Example: green */
+    color: white;
+}
+
+.complete-button:hover:not(:disabled) {
+    background-color: var(--success-hover-color);
+}
+
+.progress-section button:disabled {
+    background-color: var(--disabled-button-bg);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 10px;
+    font-size: 0.85em;
+    text-align: center;
+    width: 100%; /* Ensure it takes full width */
+}

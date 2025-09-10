@@ -1,0 +1,80 @@
+
+/* Overall page layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Main content area next to the sidebar */
+.admin-user-management {
+  flex-grow: 1; /* Allows it to take up the remaining space */
+  padding: 2rem;
+  background-color: #f4f7f9;
+}
+
+/* Table styling */
+.admin-user-management h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.admin-user-management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-user-management th,
+.admin-user-management td {
+  text-align: left;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-user-management th {
+  background-color: #f8f8f8;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-user-management tr:last-child td {
+  border-bottom: none;
+}
+
+/* Button styling */
+.admin-user-management button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-user-management button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.admin-user-management button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.admin-user-management .error {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,121 @@
+/* AssessmentTake.css */
+
+.assessment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.timer span {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.assessment-meta {
+    font-size: 1rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 20px;
+}
+
+.question-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.question-text {
+    font-size: 1.25rem;
+    color: var(--text-color-primary);
+    margin-bottom: 15px;
+}
+
+.question-image-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.question-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /*  */
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.option-item:hover {
+    background-color: var(--hover-color);
+    border-color: var(--accent-color);
+}
+
+/* This is an essential step to hide the native radio button */
+.option-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color-primary);
+    user-select: none; 
+}
+
+/* This styles your custom radio button */
+.option-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid var(--text-color-secondary);
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all 0.2s ease;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+/* This shows the 'checked' state */
+.option-item input[type="radio"]:checked + .option-label::before {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: inset 0 0 0 4px var(--card-bg-color);
+}
+
+.option-item input[type="radio"]:checked + .option-label {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.submit-button-container {
+    margin-top: 30px;
+    text-align: center;
+}

@@ -1,0 +1,174 @@
+/* frontend/src/styles/TeacherEnrollmentView.css */
+
+.teacher-enrollment-view-container {
+    padding: 20px;
+    background-color: var(--background-color);
+    min-height: calc(100vh - 60px);
+}
+
+.teacher-enrollment-view-container h2 {
+    color: var(--heading-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.course-selector {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-selector label {
+    font-size: 1.1em;
+    color: var(--primary-text-color);
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.course-selector select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--input-bg);
+    color: var(--input-text-color);
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.course-selector select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+}
+
+.students-list-section h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.student-enrollment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 15px;
+}
+
+.student-enrollment-item {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.student-info h4 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+
+.student-info p {
+    color: var(--secondary-text-color);
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.student-info .status-enrolled,
+.student-info .status-in-progress {
+    color: var(--info-color);
+    font-weight: bold;
+}
+
+.student-info .status-completed {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.student-info .status-dropped {
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+.student-actions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-actions label {
+    font-weight: bold;
+    color: var(--primary-text-color);
+    margin-right: 5px;
+}
+
+.student-actions .progress-input {
+    width: 70px; /* Smaller input for teacher view */
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.student-actions button,
+.student-actions select {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: 1px solid var(--border-color);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+}
+
+.student-actions button:hover:not(:disabled),
+.student-actions select:hover:not(:disabled) {
+    background-color: var(--button-hover-bg);
+}
+
+.student-actions button:disabled,
+.student-actions select:disabled {
+    background-color: var(--disabled-button-bg);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.student-actions select {
+    background-color: var(--input-bg);
+    color: var(--input-text-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    margin-top: 10px;
+    font-size: 0.85em;
+    text-align: center;
+    width: 100%;
+}
+
+.access-denied {
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--error-color);
+    margin-top: 50px;
+}
